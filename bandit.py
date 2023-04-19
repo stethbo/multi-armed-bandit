@@ -18,13 +18,13 @@ class Bandit:
 
     def pull(self, i: int) -> int:
         '''
-        :param int i: i'th bandit to be used
+        :param int i: index of the bandit to be used
         '''
         return 1 if np.random.uniform(0, 1) < self.probs[i] else 0
         
 
 if __name__ == '__main__':
-    bandits_probs = np.random.randint(2, 10, 10) / 10
+    bandits_probs = np.random.randint(2, 10, 20) / 10
     
     mab = Bandit(bandits_probs)
 
