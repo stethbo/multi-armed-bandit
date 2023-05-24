@@ -19,6 +19,8 @@ class Bandit:
     def pull(self, i: int) -> int:
         '''
         :param int i: index of the bandit to be used
+
+        :return int: 1 if success, 0 if failure
         '''
         return 1 if np.random.uniform(0, 1) < self.probs[i] else 0
         
